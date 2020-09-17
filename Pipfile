@@ -7,7 +7,7 @@ verify_ssl = true
 pylint = "*"
 
 [packages]
-django = "*"
+django = "==3.1"
 python-decouple = "*"
 pyjwt = "*"
 celery = "*"
