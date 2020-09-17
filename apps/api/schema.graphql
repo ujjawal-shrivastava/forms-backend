@@ -1,0 +1,26 @@
+type Query {
+    hello: String!
+    user: User!
+    form(formid:String!): PublicForm!
+    getForm(formid:String!):Form!
+    forms(input:FormsInput!):Forms!
+    responses(formid:String!):Responses!
+    forgotPasswordVerify(token:String!):Boolean
+}
+
+type Mutation {
+    register(email:String!,password:String!, name:String!):User!
+    login(email: String!, password: String!, long:Boolean): AuthToken!
+    logout:Boolean!
+    #refreshToken(token: String!): AuthToken!
+    #verifyToken(token: String!): AuthTokenVerification!
+    changeName(name:String!):User!
+    changePassword(old:String!,new:String!):Boolean!
+    forgotPassword(email:String!):Boolean
+    forgotPasswordReset(token:String!,new:String!):User
+    saveForm(input:SaveForm!):Form!
+    deleteForm(formid:String!):Boolean!
+    publishForm(formid:String):Boolean!
+    unpublishForm(formid:String):Boolean!
+    addResponse(formid:String!,data:String!):Response!
+  }

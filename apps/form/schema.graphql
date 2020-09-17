@@ -1,0 +1,72 @@
+type Form {
+    formid: String!,
+    title:String!,
+    description:String!,
+    bgtheme:String!,
+    open:Boolean!,
+    published:Boolean!
+    data:String!
+    author:User!
+    views:Int
+    responses:Int
+    added:String
+    updated:String
+
+}
+
+type PublicForm {
+    formid: String!,
+    title:String!,
+    description:String!,
+    bgtheme:String!,
+    open:Boolean!,
+    data:String!
+    author:String!
+    verified:Boolean
+}
+
+type Forms{
+    forms:[Form!],
+    total:Int!,
+    currentPage:Int!,
+    totalPages:Int!
+}
+
+type Response{
+    responseid:String!,
+    formid:String,
+    added:String,
+    data:String
+}
+
+type Responses{
+    responses:[Response!]!,
+    total:Int!
+}
+
+
+input SaveForm {
+    formid: String,
+    title:String!,
+    description:String!,
+    bgtheme:String!,
+    open:Boolean!,
+    data:String!,
+}
+
+input FormsInput {
+    page:Int!
+    open: OpenFilter!
+    published: PublishedFilter!
+}
+
+enum OpenFilter{
+        ALL
+        OPEN
+        CLOSED
+    }
+enum PublishedFilter{
+        ALL
+        SAVED
+        PUBLISHED
+    }
