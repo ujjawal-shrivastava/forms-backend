@@ -139,6 +139,10 @@ CSRF_TRUSTED_ORIGINS =['localhost:3000',]
 CSRF_TRUSTED_ORIGINS.append(config('FRONTEND_URL',cast=str))
 CSRF_TRUSTED_ORIGINS.append(config('DASHBOARD_URL',cast=str))
 
+SESSION_COOKIE_DOMAIN = ".ujjawal.io"
+
+DOMAIN_NAME = "ujjawal.co"
+
 
 CELERY_BROKER_URL = config('CELERY_BROKER_URL',cast=str)
 CELERY_ACCEPT_CONTENT = ['json']
