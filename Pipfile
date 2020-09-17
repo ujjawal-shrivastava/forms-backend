@@ -18,6 +18,7 @@ ariadne = {editable = true, git = "https://github.com/ujjawal-shrivastava/ariadn
 dj-database-url = "*"
 django-heroku = "*"
 whitenoise = "*"
+gunicorn = "*"
 
 [requires]
 python_version = "3.8"
