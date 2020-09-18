@@ -1,2 +1,2 @@
 web: gunicorn backend.wsgi --log-file -
-celery -A backend.celery worker -B --loglevel=info
+worker: celery -A backend worker -B --loglevel=info
