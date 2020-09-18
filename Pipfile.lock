@@ -27,7 +27,7 @@
         "ariadne": {
             "editable": true,
             "git": "https://github.com/ujjawal-shrivastava/ariadne.git",
-            "ref": "7768f16af2fad02384344cd33f7b0f4d276369b1"
+            "ref": "60b822ccea048ddf0b2579405ae637ffb6111d0f"
         },
         "asgiref": {
             "hashes": [
