@@ -5,6 +5,7 @@ from django.contrib.auth import get_user_model
 from .models import Form, Response
 from math import ceil
 from datetime import datetime
+from django.db.models import Sum
 
 
 form = ObjectType("Form")
@@ -249,3 +250,20 @@ def resolve_responses(_,info,formid):
             responses.append(new_res)
         total = form_responses.count()
         return {"responses":responses,"total":total}
+
+
+@login_required
+def resolve_user_data(_,info):
+    user = get_user_model().objects.get(email=info.context.user.email)
+    if user and user.is_active:
+        form = Form.objects.filter(author=user)
+        form_count = form.count()
+        responses_count = Response.objects.filter(form=form).count()
+        views_count = form.objects.aggregate(Sum('views'))
+        views_count = views_count['views__sum']
+
+        return {
+            "forms":form_count,
+            "responses":responses_count,
+            "views":views_count
+        }

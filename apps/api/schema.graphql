@@ -6,6 +6,7 @@ type Query {
     forms(input:FormsInput!):Forms!
     responses(formid:String!):Responses!
     forgotPasswordVerify(token:String!):Boolean
+    userData:UserData!
 }
 
 type Mutation {

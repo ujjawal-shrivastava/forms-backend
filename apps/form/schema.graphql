@@ -44,6 +44,12 @@ type Responses{
     total:Int!
 }
 
+type UserData{
+    forms:Int!
+    responses:Int!
+    views:Int!
+}
+
 
 input SaveForm {
     formid: String,

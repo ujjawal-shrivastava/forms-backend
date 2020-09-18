@@ -27,6 +27,7 @@ query.set_field("form",f_resolver.resolve_public_form)
 query.set_field("getForm",f_resolver.resolve_get_form)
 query.set_field("forgotPasswordVerify",a_resolver.resolve_forgot_password_check)
 query.set_field("responses",f_resolver.resolve_responses)
+query.set_field("userData",f_resolver.resolve_user_data)
 
 mutation = MutationType()
 
