@@ -132,6 +132,8 @@ CORS_ORIGIN_WHITELIST.append(config('FRONTEND_URL',cast=str))
 CORS_ORIGIN_WHITELIST.append(config('DASHBOARD_URL',cast=str))
 CORS_ALLOW_CREDENTIALS=True
 
+SESSION_COOKIE_DOMAIN = "https://app.deform.ujjawal.co/"
+
 CSRF_TRUSTED_ORIGINS =['localhost:3000',]
 CSRF_TRUSTED_ORIGINS.append(config('FRONTEND_URL',cast=str))
 CSRF_TRUSTED_ORIGINS.append(config('DASHBOARD_URL',cast=str))
