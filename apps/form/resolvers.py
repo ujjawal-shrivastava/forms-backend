@@ -261,6 +261,7 @@ def resolve_user_data(_,info):
         responses_count = Response.objects.filter(form__author=user).count()
         views_count = form.aggregate(Sum('views'))
         views_count = views_count['views__sum']
+        if(!views_count) views_count=0
 
         return {
             "forms":form_count,
