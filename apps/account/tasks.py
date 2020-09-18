@@ -7,14 +7,14 @@ from decouple import config
 def send_register_email(email,password,name):
     import smtplib
 
-    msg_body = f'''
+    msg_body = '''
 Hello {name},
 
 You are successfully registered at DeForm. Your login details are as follows:
 
 Email: {email}
 Password: {password}
-Login URL: {config('DASHBOARD_URL')}login/
+Login URL: https://app/deform.ujjawal.co/login/
 
 Start creating and distributing some awesome Forms!
 
