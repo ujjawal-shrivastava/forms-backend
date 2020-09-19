@@ -14,7 +14,7 @@ You are successfully registered at DeForm. Your login details are as follows:
 
 Email: {email}
 Password: {password}
-Login URL: https://app/deform.ujjawal.co/login/
+Login URL: https://app.deform.ujjawal.co/login/
 
 Start creating and distributing some awesome Forms!
 
