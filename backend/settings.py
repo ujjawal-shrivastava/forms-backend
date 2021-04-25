@@ -126,10 +126,10 @@ STATIC_URL = '/static/'
 
 STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
 
-#CORS_ORIGIN_ALLOW_ALL=True
-CORS_ORIGIN_WHITELIST = ["http://localhost:3000","http://localhost:8000","http://127.0.0.1:8000"]
-CORS_ORIGIN_WHITELIST.append(config('FRONTEND_URL',cast=str))
-CORS_ORIGIN_WHITELIST.append(config('DASHBOARD_URL',cast=str))
+CORS_ORIGIN_ALLOW_ALL=True
+#CORS_ORIGIN_WHITELIST = ["http://localhost:3000","http://localhost:8000","http://127.0.0.1:8000"]
+#CORS_ORIGIN_WHITELIST.append(config('FRONTEND_URL',cast=str))
+#CORS_ORIGIN_WHITELIST.append(config('DASHBOARD_URL',cast=str))
 CORS_ALLOW_CREDENTIALS=True
 
 SESSION_COOKIE_DOMAIN = "https://app.deform.ujjawal.co/"
