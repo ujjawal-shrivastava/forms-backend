@@ -14,6 +14,9 @@ class JSONWebTokenMiddleware(object):
         request = info.context
         #token = get_token_from_http_header(request)
         token = get_token_from_cookie(request)
+        #adding auth from header
+        if token == None:
+            token = get_token_from_http_header(request)
 
         if token is not None:
             user = getattr(request, "user", None)
